@@ -1,0 +1,494 @@
+{
+  "donuts": [
+    {
+      "id": 100001,
+      "name": "Glazed Donut",
+      "category": "classic",
+      "content": {
+        "overview": "Classic sweet donut with a shiny glaze, a timeless treat.",
+        "preparation": [
+          "Mix flour, yeast, sugar, milk, and butter into dough.",
+          "Let dough rise for 1 hour.",
+          "Shape into rings, fry at 175°C until golden.",
+          "Dip in warm glaze, let cool."
+        ],
+        "tips": [
+          "Use fresh yeast for best rise.",
+          "Cool glaze slightly before dipping."
+        ]
+      },
+      "description": "Classic sweet donut with shiny glaze.",
+      "ingredients": [
+        "flour - 2 cups",
+        "sugar - 1/2 cup",
+        "yeast - 1 tbsp",
+        "milk - 3/4 cup",
+        "butter - 2 tbsp"
+      ]
+    },
+    {
+      "id": 100002,
+      "name": "Jelly-Filled Donut",
+      "category": "filled",
+      "content": {
+        "overview": "Soft donut stuffed with fruity jelly, a delightful surprise inside.",
+        "preparation": [
+          "Prepare yeast dough with flour, yeast, and egg.",
+          "Shape into balls, let rise for 45 minutes.",
+          "Fry at 180°C, inject with jelly after cooling.",
+          "Dust with sugar."
+        ],
+        "tips": [
+          "Use thick jelly to avoid leaks.",
+          "Cool donuts before filling."
+        ]
+      },
+      "description": "Soft donut stuffed with fruity jelly.",
+      "ingredients": [
+        "flour - 2 cups",
+        "yeast - 1 tbsp",
+        "jelly - 1/2 cup",
+        "sugar - 1/4 cup",
+        "egg - 1"
+      ]
+    },
+    {
+      "id": 100003,
+      "name": "Boston Cream Donut",
+      "category": "filled",
+      "content": {
+        "overview": "Rich cream-filled donut topped with chocolate glaze.",
+        "preparation": [
+          "Make yeast dough, shape into balls.",
+          "Fry at 175°C, let cool.",
+          "Fill with custard using a piping bag.",
+          "Top with melted chocolate."
+        ],
+        "tips": [
+          "Chill custard before filling.",
+          "Use dark chocolate for contrast."
+        ]
+      },
+      "description": "Rich cream-filled donut with chocolate glaze.",
+      "ingredients": [
+        "flour - 2 cups",
+        "yeast - 1 tbsp",
+        "custard - 1 cup",
+        "chocolate - 1/2 cup",
+        "milk - 3/4 cup"
+      ]
+    },
+    {
+      "id": 100004,
+      "name": "Old-Fashioned Donut",
+      "category": "cake",
+      "content": {
+        "overview": "Crispy, cake-like donut with a rustic, textured finish.",
+        "preparation": [
+          "Mix flour, sugar, baking powder, butter, and egg.",
+          "Shape into rings, fry at 180°C.",
+          "Cool slightly, coat with sugar.",
+          "Serve warm."
+        ],
+        "tips": ["Don’t overmix batter for texture.", "Fry in small batches."]
+      },
+      "description": "Crispy, cake-like donut with a rustic twist.",
+      "ingredients": [
+        "flour - 2 cups",
+        "sugar - 1/2 cup",
+        "baking powder - 2 tsp",
+        "butter - 3 tbsp",
+        "egg - 1"
+      ]
+    },
+    {
+      "id": 100005,
+      "name": "Apple Cider Donut",
+      "category": "cake",
+      "content": {
+        "overview": "Spicy apple-flavored cake donut with a seasonal vibe.",
+        "preparation": [
+          "Blend apple cider into flour, sugar, and cinnamon batter.",
+          "Shape into rings, fry at 175°C.",
+          "Roll in cinnamon-sugar mix while warm.",
+          "Cool before serving."
+        ],
+        "tips": ["Use fresh cider for flavor.", "Add nutmeg for extra spice."]
+      },
+      "description": "Spicy apple-flavored cake donut.",
+      "ingredients": [
+        "flour - 2 cups",
+        "apple cider - 1 cup",
+        "cinnamon - 1 tsp",
+        "sugar - 1/2 cup",
+        "oil - 2 tbsp"
+      ]
+    },
+    {
+      "id": 100006,
+      "name": "Cronut",
+      "category": "exotic",
+      "content": {
+        "overview": "Flaky croissant-donut hybrid, a trendy fusion treat.",
+        "preparation": [
+          "Layer butter into yeast dough like croissant.",
+          "Cut into rings, let rise for 2 hours.",
+          "Fry at 180°C, glaze after cooling.",
+          "Serve fresh."
+        ],
+        "tips": ["Keep dough cold for flakiness.", "Avoid over-frying."]
+      },
+      "description": "Hybrid of croissant and donut, flaky and sweet.",
+      "ingredients": [
+        "flour - 2 cups",
+        "butter - 1/2 cup",
+        "yeast - 1 tbsp",
+        "sugar - 1/4 cup",
+        "glaze - 1/2 cup"
+      ]
+    },
+    {
+      "id": 100007,
+      "name": "Mochi Donut",
+      "category": "exotic",
+      "content": {
+        "overview": "Chewy Japanese-style donut with a unique mochi texture.",
+        "preparation": [
+          "Mix mochi flour with sugar and water.",
+          "Shape into rings, fry at 170°C until chewy.",
+          "Cool, sprinkle with sesame if desired.",
+          "Serve warm."
+        ],
+        "tips": [
+          "Don’t overcook to keep chewiness.",
+          "Add food coloring for fun."
+        ]
+      },
+      "description": "Chewy Japanese-style donut with a unique texture.",
+      "ingredients": [
+        "mochi flour - 2 cups",
+        "sugar - 1/2 cup",
+        "water - 3/4 cup",
+        "oil - 2 tbsp",
+        "sesame - 1 tbsp"
+      ]
+    },
+    {
+      "id": 100008,
+      "name": "Beignet",
+      "category": "exotic",
+      "content": {
+        "overview": "Light French donut, dusted with powdered sugar.",
+        "preparation": [
+          "Mix flour, yeast, and sugar into dough.",
+          "Cut into squares, fry at 180°C.",
+          "Drain excess oil, dust with powdered sugar.",
+          "Enjoy hot."
+        ],
+        "tips": ["Use a deep fryer for even cooking.", "Serve with coffee."]
+      },
+      "description": "Light French donut, perfect with coffee.",
+      "ingredients": [
+        "flour - 2 cups",
+        "yeast - 1 tbsp",
+        "sugar - 1/4 cup",
+        "oil - 2 tbsp",
+        "powdered sugar - 1/2 cup"
+      ]
+    },
+    {
+      "id": 100009,
+      "name": "Cinnamon Sugar Donut",
+      "category": "classic",
+      "content": {
+        "overview": "Warm, spicy-sweet treat rolled in cinnamon sugar.",
+        "preparation": [
+          "Prepare yeast dough, shape into rings.",
+          "Fry at 175°C until golden.",
+          "Roll in cinnamon-sugar mix while warm.",
+          "Cool slightly."
+        ],
+        "tips": [
+          "Use fresh cinnamon for aroma.",
+          "Roll immediately after frying."
+        ]
+      },
+      "description": "Warm, spicy-sweet treat.",
+      "ingredients": [
+        "flour - 2 cups",
+        "yeast - 1 tbsp",
+        "cinnamon - 1 tsp",
+        "sugar - 1/2 cup",
+        "butter - 2 tbsp"
+      ]
+    },
+    {
+      "id": 100010,
+      "name": "Maple Bacon Donut",
+      "category": "filled",
+      "content": {
+        "overview": "Sweet-salty combo with a smoky bacon twist.",
+        "preparation": [
+          "Fry yeast dough rings at 175°C.",
+          "Glaze with maple syrup, top with crispy bacon.",
+          "Cool slightly, serve fresh.",
+          "Store in airtight container."
+        ],
+        "tips": [
+          "Cook bacon crisp but not burnt.",
+          "Warm maple for smooth glaze."
+        ]
+      },
+      "description": "Sweet-salty combo with a smoky twist.",
+      "ingredients": [
+        "flour - 2 cups",
+        "yeast - 1 tbsp",
+        "maple syrup - 1/2 cup",
+        "bacon - 4 strips",
+        "sugar - 1/4 cup"
+      ]
+    },
+    {
+      "id": 100011,
+      "name": "Sprinkles Donut",
+      "category": "classic",
+      "content": {
+        "overview": "Fun, colorful donut for all ages with sprinkles.",
+        "preparation": [
+          "Fry yeast dough rings at 180°C.",
+          "Dip in glaze, add sprinkles immediately.",
+          "Let set for 10 minutes.",
+          "Serve with a smile!"
+        ],
+        "tips": [
+          "Use vibrant sprinkles for effect.",
+          "Apply sprinkles before glaze sets."
+        ]
+      },
+      "description": "Fun, colorful donut for all ages.",
+      "ingredients": [
+        "flour - 2 cups",
+        "yeast - 1 tbsp",
+        "glaze - 1/2 cup",
+        "sprinkles - 2 tbsp",
+        "milk - 3/4 cup"
+      ]
+    },
+    {
+      "id": 100012,
+      "name": "Chocolate Frosted Donut",
+      "category": "classic",
+      "content": {
+        "overview": "Rich chocolate-coated classic donut.",
+        "preparation": [
+          "Fry yeast dough rings at 175°C.",
+          "Spread melted chocolate frosting.",
+          "Let cool until chocolate sets.",
+          "Enjoy with milk."
+        ],
+        "tips": ["Use high-quality chocolate.", "Cool donuts before frosting."]
+      },
+      "description": "Rich chocolate-coated classic donut.",
+      "ingredients": [
+        "flour - 2 cups",
+        "yeast - 1 tbsp",
+        "chocolate - 1/2 cup",
+        "sugar - 1/4 cup",
+        "butter - 2 tbsp"
+      ]
+    },
+    {
+      "id": 100013,
+      "name": "Jelly Donut",
+      "category": "filled",
+      "content": {
+        "overview": "Traditional jam-filled delight with a sugary coat.",
+        "preparation": [
+          "Make yeast dough, shape into balls.",
+          "Fry at 180°C, cool slightly.",
+          "Inject with jam, dust with sugar.",
+          "Serve fresh."
+        ],
+        "tips": [
+          "Use seedless jam for smoothness.",
+          "Fill while warm but not hot."
+        ]
+      },
+      "description": "Traditional jam-filled delight.",
+      "ingredients": [
+        "flour - 2 cups",
+        "yeast - 1 tbsp",
+        "jam - 1/2 cup",
+        "sugar - 1/4 cup",
+        "egg - 1"
+      ]
+    },
+    {
+      "id": 100014,
+      "name": "Apple Fritter",
+      "category": "cake",
+      "content": {
+        "overview": "Chunky apple donut with a sweet glaze.",
+        "preparation": [
+          "Mix flour, sugar, and chopped apples.",
+          "Fry spoonfuls at 175°C until golden.",
+          "Drizzle with glaze, cool.",
+          "Serve warm."
+        ],
+        "tips": ["Use tart apples for balance.", "Don’t overcrowd the fryer."]
+      },
+      "description": "Chunky apple donut with sweet glaze.",
+      "ingredients": [
+        "flour - 2 cups",
+        "apple - 1 cup",
+        "sugar - 1/2 cup",
+        "cinnamon - 1 tsp",
+        "oil - 2 tbsp"
+      ]
+    },
+    {
+      "id": 100015,
+      "name": "Matcha Donut",
+      "category": "exotic",
+      "content": {
+        "overview": "Earthy green tea-flavored donut with a unique taste.",
+        "preparation": [
+          "Mix matcha into flour batter.",
+          "Fry at 170°C, dust with matcha powder.",
+          "Cool, serve with tea.",
+          "Store in airtight container."
+        ],
+        "tips": ["Sift matcha for even color.", "Avoid overmixing batter."]
+      },
+      "description": "Earthy green tea-flavored donut.",
+      "ingredients": [
+        "flour - 2 cups",
+        "matcha - 2 tbsp",
+        "sugar - 1/2 cup",
+        "egg - 1",
+        "oil - 2 tbsp"
+      ]
+    },
+    {
+      "id": 100016,
+      "name": "Ube Donut",
+      "category": "exotic",
+      "content": {
+        "overview": "Vibrant purple Filipino donut with yam flavor.",
+        "preparation": [
+          "Mix ube into dough, shape into rings.",
+          "Fry at 175°C, glaze with ube.",
+          "Cool, sprinkle with coconut.",
+          "Serve fresh."
+        ],
+        "tips": [
+          "Use fresh ube for authentic taste.",
+          "Add food coloring if needed."
+        ]
+      },
+      "description": "Vibrant purple Filipino donut.",
+      "ingredients": [
+        "flour - 2 cups",
+        "ube - 1 cup",
+        "sugar - 1/2 cup",
+        "milk - 3/4 cup",
+        "butter - 2 tbsp"
+      ]
+    },
+    {
+      "id": 100017,
+      "name": "Savory Cheese Donut",
+      "category": "exotic",
+      "content": {
+        "overview": "Unique savory donut with cheesy goodness.",
+        "preparation": [
+          "Mix cheese into dough, shape into rings.",
+          "Fry at 180°C, sprinkle with herbs.",
+          "Cool slightly, serve warm.",
+          "Pair with dips."
+        ],
+        "tips": [
+          "Use sharp cheese for flavor.",
+          "Don’t overcook to keep cheese melty."
+        ]
+      },
+      "description": "Unique savory donut option.",
+      "ingredients": [
+        "flour - 2 cups",
+        "cheese - 1 cup",
+        "yeast - 1 tbsp",
+        "herbs - 1 tsp",
+        "oil - 2 tbsp"
+      ]
+    },
+    {
+      "id": 100018,
+      "name": "Long John",
+      "category": "filled",
+      "content": {
+        "overview": "Elongated cream-filled donut with a smooth glaze.",
+        "preparation": [
+          "Make yeast dough, shape into logs.",
+          "Fry at 175°C, cool.",
+          "Fill with cream, glaze top.",
+          "Slice and serve."
+        ],
+        "tips": ["Use a piping bag for even filling.", "Glaze while warm."]
+      },
+      "description": "Elongated cream-filled donut.",
+      "ingredients": [
+        "flour - 2 cups",
+        "yeast - 1 tbsp",
+        "cream - 1 cup",
+        "glaze - 1/2 cup",
+        "sugar - 1/4 cup"
+      ]
+    },
+    {
+      "id": 100019,
+      "name": "Cruller",
+      "category": "cake",
+      "content": {
+        "overview": "Twisted, crunchy cake donut with a light glaze.",
+        "preparation": [
+          "Mix flour, sugar, and egg into dough.",
+          "Twist into shapes, fry at 180°C.",
+          "Glaze lightly, cool.",
+          "Serve fresh."
+        ],
+        "tips": ["Twist tightly for shape.", "Fry at medium heat."]
+      },
+      "description": "Twisted, crunchy cake donut.",
+      "ingredients": [
+        "flour - 2 cups",
+        "sugar - 1/2 cup",
+        "egg - 1",
+        "oil - 2 tbsp",
+        "glaze - 1/2 cup"
+      ]
+    },
+    {
+      "id": 100020,
+      "name": "Churros",
+      "category": "exotic",
+      "content": {
+        "overview": "Crispy Spanish donut sticks rolled in cinnamon sugar.",
+        "preparation": [
+          "Pipe dough into sticks, fry at 180°C.",
+          "Roll in cinnamon-sugar mix.",
+          "Serve warm with chocolate dip.",
+          "Enjoy immediately."
+        ],
+        "tips": ["Use a star tip for texture.", "Keep oil steady."]
+      },
+      "description": "Crispy Spanish donut sticks.",
+      "ingredients": [
+        "flour - 1 cup",
+        "water - 1 cup",
+        "cinnamon - 1 tsp",
+        "sugar - 1/2 cup",
+        "oil - 2 tbsp"
+      ]
+    }
+  ]
+}

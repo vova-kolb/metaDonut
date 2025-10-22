@@ -13,7 +13,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Montserrat:wght@100..900&display=swap"
           rel="stylesheet">
-    <script src="index.js"></script>
 
 </head>
 <body>
@@ -40,10 +39,10 @@
         <div class="container">
             <h2>Pick your donut</h2>
             <div class="recipes_nav">
-                <div data-cat="classic">CLASSIC</div>
-                <div data-cat="filled">FILLED</div>
-                <div data-cat="cake">CAKE</div>
-                <div data-cat="exotic">EXOTIC</div>
+                <button data-cat="classic" class="active">CLASSIC</button>
+                <button data-cat="filled">FILLED</button>
+                <button data-cat="cake">CAKE</button>
+                <button data-cat="exotic">EXOTIC</button>
             </div>
 
             <div class="recipes_list">
@@ -59,13 +58,34 @@
         </div>
     </section>
 
+    <script>
+        const navItems = document.querySelectorAll('.recipes_nav > button');
+        const recipeItems = document.querySelectorAll('.recipe_item');
+
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navItems.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+
+                const selectedCat = item.dataset.cat;
+
+                recipeItems.forEach(recipe => {
+                    const recipeCat = recipe.dataset.cat;
+                    if (selectedCat === 'all' || recipeCat === selectedCat) {
+                        recipe.style.display = 'block';
+                    } else {
+                        recipe.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
 </div>
 
 <footer class="footer">
     <div class="container">
         <div class="logo">metaD<span><img src="images/logo_donut.svg"></span>nut</div>
-        <p class="footer_comment">Sweet recipes made with love & code 💻💖</p>
-
         <p class="footer_copy">© 2025 metaDonut. All rights reserved.</p>
     </div>
 </footer>
