@@ -1,15 +1,16 @@
-// document.querySelector('a[href^="#"]').forEach(anchor => {
-//     anchor.addEventListener('click', function (e) {
-//         e.preventDefault();
-//         const target = document.querySelector(this.getAttribute('href'));
-//         const offset = 0; // например, высота фиксированного хедера
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('a[href^="#recipe"]').addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        const offset = 0; // например, высота фиксированного хедера
 
-//         window.scrollTo({
-//             top: target.offsetTop - offset,
-//             behavior: 'smooth'
-//         });
-//     });
-// });
+        window.scrollTo({
+            top: target.offsetTop - offset,
+            behavior: 'smooth'
+        });
+    });
+})
+
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -40,7 +41,7 @@ const itemsRender = function (data) {
                     <div class="item_wrap">
                         <div class="item_name">${item.name}</div>
                         <div class="item_description">${item.description}</div>
-                        <a href="./page.html?id=${item.id}" class="btn">How to do it</a>
+                        <a href="./donut.html?id=${item.id}" class="btn">How to do it</a>
                     </div>
                 </div>
         `
@@ -53,33 +54,38 @@ const singleItemRender = function (recipe) {
 
     console.log(recipe)
 
-    const preparation = recipe.content.preparation.map((item) => `<li>${item}</li>`).reduce((item, acc) => acc += item, '')
+    const preparation = recipe.content.preparation.reverse().map((item) => `<li>${item}</li>`).reduce((item, acc) => acc += item, '')
     const tips = recipe.content.tips.map(item => `<li>${item}</li>`).reduce((item, acc) => acc += item, '')
     const ingredients = recipe.ingredients.map(item => `<li>${item}</li>`).reduce((item, acc) => acc += item, '')
 
     singleRecipe.innerHTML = `
-        <h2 class="donut_name">${recipe.name}</h2>
-        <div class="donut_desc">${recipe.content.overview}</div>
-        <div class="donut_category">${recipe.category}</div>
-        <div class="donut_wrap">
-            <div class="donut_img"><img src="./images/donuts/${recipe.id}.jpg"></div>
-            <div class="donut_ingredients">
-                <ul>
-                ${ingredients}
-                </ul>
+        <div class="donut_hero"><img src="./images/donuts/${recipe.id}.jpg"></div>
+        <div class="container">
+            <h2 class="donut_name">${recipe.name}</h2>
+            <div class="donut_desc">${recipe.content.overview}</div>
+<!--            <div class="donut_category">${recipe.category}</div>-->
+            <div class="donut_wrap">
+                <div class="donut_img"><img src="./images/donuts/${recipe.id}.jpg"></div>
+                <div class="donut_ingredients">
+                    <h3>Ingredients:</h3>
+                    <ul>
+                    ${ingredients}
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="donut_wrap">
-            <div class="recipe_preparation">
-                <h3>How to cook it:</h3>
-                <or>
-                    ${preparation}
-                </or>
-            </div>
-            <div class="donut_tips">
-                <ul>
-                    ${tips}
-                </ul>
+             <div class="donut_wrap">
+                 <div class="recipe_preparation">
+                        <h3>How to cook it:</h3>
+                        <ol>
+                            ${preparation}
+                        </ol>
+                 </div>
+                <div class="donut_tips">
+                        <h3>Cooking tips:</h3>
+                        <ul>
+                            ${tips}
+                        </ul>
+                </div>
             </div>
         </div>`
 }

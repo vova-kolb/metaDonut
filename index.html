@@ -21,7 +21,7 @@
 
     <header>
         <div class="container">
-            <div class="logo">metaD<span><img src="images/logo_donut.svg"></span>nut</div>
+            <div class="logo"><a href="/">metaD<span><img src="images/logo_donut.svg"></span>nut</a></div>
             <div class="comment">MetaDonut — Addictive Like Methadone</div>
         </div>
     </header>
@@ -57,30 +57,6 @@
             </div>
         </div>
     </section>
-
-    <script>
-        const navItems = document.querySelectorAll('.recipes_nav > button');
-        const recipeItems = document.querySelectorAll('.recipe_item');
-
-        navItems.forEach(item => {
-            item.addEventListener('click', () => {
-                navItems.forEach(i => i.classList.remove('active'));
-                item.classList.add('active');
-
-                const selectedCat = item.dataset.cat;
-
-                recipeItems.forEach(recipe => {
-                    const recipeCat = recipe.dataset.cat;
-                    if (selectedCat === 'all' || recipeCat === selectedCat) {
-                        recipe.style.display = 'block';
-                    } else {
-                        recipe.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
-
 </div>
 
 <footer class="footer">
