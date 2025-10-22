@@ -1,0 +1,163 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: 'Baloo 2', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 0;
+    z-index: 5;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .logo {
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 700;
+    font-size: 10rem;
+    background: linear-gradient(90deg, #E21E80 0%, #FF66A3 50%, #FFB6C1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 100%;
+}
+
+header .logo span {
+    display: inline-block;
+    width: 8rem;
+    height: 8rem;
+    transform: translateY(15px);
+    /*animation: spin 1s infinite;*/
+}
+
+header .logo span img {
+    width: 100%;
+    height: 100%;
+    animation: spin 8s linear infinite;
+}
+
+header .comment {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hero {
+    position: relative;
+}
+
+.hero picture img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+            to bottom,
+            rgba(60, 42, 33, 0.9) 10%,
+            rgba(60, 42, 33, 0.7) 40%,
+            rgba(60, 42, 33, 0) 100%
+    );
+}
+
+.hero .hero_wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10vh;
+    z-index: 1;
+}
+
+.hero .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 600;
+    width: 350px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #FF66A3;
+    color: #fff;
+    outline: none;
+    transition: background-color .3s ease-in-out;
+    animation: bounce 2s infinite;
+}
+
+.hero .btn:hover {
+    background-color: #e44c8a;
+}
+
+@keyframes bounce {
+    70% { transform:translateY(0%); }
+    80% { transform:translateY(-15%); }
+    90% { transform:translateY(0%); }
+    95% { transform:translateY(-7%); }
+    97% { transform:translateY(0%); }
+    99% { transform:translateY(-3%); }
+    100% { transform:translateY(0); }
+}
+
+.recipes {
+    height: 100vh;
+    margin-top: 5rem;
+}
+
+.recipes_nav {
+    display: flex;
+    justify-content: center;
+    gap: 0 15px;
+}
+
+.recipes_nav > div {
+    padding: 10px 15px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-weight: 500;
+    cursor: pointer;
+}
