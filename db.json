@@ -490,5 +490,55 @@
         "oil - 2 tbsp"
       ]
     }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "name": "Anna Smith",
+      "recipe": "Glazed Donut",
+      "text": "Amazing recipe! The donuts turned out tender and fluffy. The glaze is just perfect, not too sweet. The whole family is delighted!",
+      "date": "2025-10-20",
+      "rating": 5
+    },
+    {
+      "id": 2,
+      "name": "Michael Johnson",
+      "recipe": "Chocolate Frosted Donut",
+      "text": "These are the best chocolate donuts I've ever tried! The recipe is simple and clear, the result exceeds all expectations. Thank you!",
+      "date": "2025-10-18",
+      "rating": 5
+    },
+    {
+      "id": 3,
+      "name": "Sarah Williams",
+      "recipe": "",
+      "text": "Wonderful website with excellent recipes! Everything is described step by step, even a beginner can handle it. I've already made 5 different types of donuts!",
+      "date": "2025-10-15",
+      "rating": 5
+    },
+    {
+      "id": 4,
+      "name": "Alex Brown",
+      "recipe": "Boston Cream Donut",
+      "text": "Boston Cream is absolutely incredible! The cream turned out very delicate, and the chocolate glaze added the perfect flavor balance.",
+      "date": "2025-10-12",
+      "rating": 5
+    },
+    {
+      "id": 5,
+      "name": "Emily Davis",
+      "recipe": "Cinnamon Sugar Donut",
+      "text": "The cinnamon aroma is simply divine! The donuts melt in your mouth. This is now my favorite recipe for family breakfasts.",
+      "date": "2025-10-10",
+      "rating": 5
+    },
+    {
+      "id": 6,
+      "name": "David Wilson",
+      "recipe": "Maple Bacon Donut",
+      "text": "The unusual combination of sweet and salty is a bomb! I was skeptical at first, but after trying it, I fell in love with this recipe!",
+      "date": "2025-10-08",
+      "rating": 4
+    }
   ]
 }

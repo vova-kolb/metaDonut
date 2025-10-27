@@ -57,6 +57,49 @@
             </div>
         </div>
     </section>
+
+    <section id="reviews" class="reviews_section">
+        <div class="container">
+            <h2>Customer Reviews</h2>
+            
+            <div class="reviews_slider">
+                <button class="slider_arrow slider_arrow_left" id="prevReview">‹</button>
+                <div class="reviews_slider_wrapper">
+                    <div class="reviews_slider_track">
+                        <!-- Reviews will be rendered here by JavaScript -->
+                    </div>
+                </div>
+                <button class="slider_arrow slider_arrow_right" id="nextReview">›</button>
+            </div>
+            
+            <div class="slider_dots">
+                <!-- Dots will be rendered here by JavaScript -->
+            </div>
+
+            <div class="review_form_wrapper">
+                <h3>Leave Your Review</h3>
+                <form id="reviewForm" class="review_form">
+                    <div class="form_group">
+                        <label for="reviewName">Your Name <span class="required">*</span></label>
+                        <input type="text" id="reviewName" name="name" required placeholder="Enter your name">
+                    </div>
+                    
+                    <div class="form_group">
+                        <label for="reviewRecipe">Recipe Name <span class="optional">(optional)</span></label>
+                        <input type="text" id="reviewRecipe" name="recipe" placeholder="e.g., Glazed Donut">
+                    </div>
+                    
+                    <div class="form_group">
+                        <label for="reviewText">Your Review <span class="required">*</span></label>
+                        <textarea id="reviewText" name="text" required placeholder="Tell us about your experience..." rows="5"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn submit_btn">Submit Review</button>
+                </form>
+                <div id="formMessage" class="form_message"></div>
+            </div>
+        </div>
+    </section>
 </div>
 
 <footer class="footer">
