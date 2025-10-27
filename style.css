@@ -11,10 +11,17 @@ body {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    overflow-x: hidden;
 }
 
 img {
     max-width: 100%;
+    height: auto;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .main {
@@ -134,6 +141,7 @@ header .comment {
     text-decoration: none;
     font-weight: 600;
     width: 350px;
+    max-width: 90%;
     height: 50px;
     border-radius: 30px;
     background-color: #FF66A3;
@@ -141,6 +149,9 @@ header .comment {
     outline: none;
     transition: all .4s ease-in-out;
     animation: bounce 2s infinite;
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+    text-align: center;
 }
 
 .hero .btn:hover {
@@ -168,6 +179,7 @@ header .comment {
     align-items: center;
     justify-content: center;
     margin-top: 1rem;
+    padding: 0 1rem;
 }
 
 .recipes_nav > button {
@@ -224,11 +236,18 @@ header .comment {
     overflow: hidden;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .recipe_item:hover {
-    /*transform: translateY(-6px);*/
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+@media (hover: hover) {
+    .recipe_item:hover {
+        transform: translateY(-4px);
+    }
 }
 
 .item_img {
@@ -246,6 +265,10 @@ header .comment {
 
 .item_wrap {
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
 }
 
 .item_name {
@@ -260,6 +283,7 @@ header .comment {
     color: #555;
     margin-bottom: 12px;
     min-height: 40px;
+    flex-grow: 1;
 }
 
 .recipe_item .btn {
@@ -272,10 +296,17 @@ header .comment {
     font-weight: 600;
     text-decoration: none;
     transition: background 0.3s ease, transform 0.2s ease;
+    box-sizing: border-box;
 }
 
 .recipe_item .btn:hover {
     background: #e44c8a;
+}
+
+@media (hover: hover) {
+    .recipe_item .btn:hover {
+        transform: translateY(-2px);
+    }
 }
 
 
@@ -313,6 +344,7 @@ header .comment {
 .donut_desc {
     text-align: center;
     font-size: 2rem;
+    padding: 0 1rem;
 }
 
 .donut_wrap {
@@ -337,6 +369,7 @@ header .comment {
 
 .donut_wrap h3 {
     font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .donut_ingredients {
@@ -344,18 +377,23 @@ header .comment {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 2rem;
     flex-grow: 1;
+    background: #fff;
 }
 
 .recipe_preparation {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 2rem;
+    flex-grow: 1;
+    background: #fff;
 }
 
 .donut_tips {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 2rem;
+    flex-grow: 1;
+    background: #fff;
 }
 
 .donut_wrap ul {
@@ -747,19 +785,185 @@ header .comment {
     font-size: 1.1rem;
 }
 
+/* Extra Large Screens */
 @media (max-width: 1500px) {
     .container {
-        padding: 0 15px;
+        padding: 0 1.5rem;
     }
 }
 
-@media (max-width: 900px) {
+/* Large Tablets & Small Desktops */
+@media (max-width: 1200px) {
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    .logo {
+        font-size: 8rem;
+    }
+
+    .logo span {
+        width: 6.5rem;
+        transform: translateY(12px);
+    }
+
+    header .comment {
+        font-size: 2rem;
+    }
+
+    .hero .btn {
+        width: 300px;
+        height: 45px;
+        font-size: 0.95rem;
+    }
+
+    .recipes {
+        padding-top: 4rem;
+    }
+
+    .recipes_nav > button {
+        font-size: 1.8rem;
+        padding: 0.4rem 1.8rem;
+    }
+
+    .donut_wrap {
+        gap: 0 60px;
+    }
+
+    .donut_wrap h3 {
+        font-size: 1.8rem;
+    }
+
+    .donut_wrap ul li,
+    .donut_wrap ol li {
+        font-size: 1.8rem;
+    }
+
+    .donut_ingredients,
+    .recipe_preparation,
+    .donut_tips {
+        padding: 1.5rem;
+    }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+    h2 {
+        font-size: 3rem;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .logo {
+        font-size: 7rem;
+    }
+
+    .logo span {
+        width: 5.5rem;
+        transform: translateY(10px);
+    }
+
+    header .comment {
+        font-size: 1.8rem;
+    }
+
     .recipes_list {
         grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .item_img {
+        height: 250px;
+    }
+
+    .item_name {
+        font-size: 1.3rem;
+    }
+
+    .item_description {
+        font-size: 0.95rem;
+    }
+
+    .reviews_section {
+        padding: 4rem 0;
+    }
+
+    .review_card {
+        padding: 2rem;
+    }
+
+    .review_avatar {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .review_name {
+        font-size: 1.4rem;
+    }
+
+    .review_text {
+        font-size: 1.1rem;
+    }
+
+    .footer .logo {
+        font-size: 4rem;
+    }
+
+    .footer .logo span {
+        width: 3.5rem;
+    }
+
+    .footer_copy {
+        font-size: 1rem;
     }
 }
 
+/* Small Tablets */
 @media (max-width: 900px) {
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .logo {
+        font-size: 6rem;
+    }
+
+    .logo span {
+        width: 5rem;
+        transform: translateY(8px);
+    }
+
+    header .comment {
+        font-size: 1.5rem;
+    }
+
+    .hero .btn {
+        width: 280px;
+        height: 42px;
+        font-size: 0.9rem;
+    }
+
+    .recipes {
+        padding-top: 3rem;
+    }
+
+    .recipes_nav > button {
+        font-size: 1.5rem;
+        padding: 0.4rem 1.5rem;
+    }
+
+    .recipes_list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .item_img {
+        height: 220px;
+    }
+
     .reviews_slider {
         flex-direction: column;
         gap: 15px;
@@ -777,16 +981,6 @@ header .comment {
         max-width: 200px;
     }
 
-    .review_card {
-        padding: 2rem;
-    }
-
-    .review_avatar {
-        width: 60px;
-        height: 60px;
-        font-size: 1.5rem;
-    }
-
     .review_form_wrapper {
         padding: 2rem;
     }
@@ -794,12 +988,118 @@ header .comment {
     .review_form_wrapper h3 {
         font-size: 2rem;
     }
+
+    .donut_wrap {
+        flex-direction: column;
+        gap: 30px 0;
+    }
+
+    .donut_img {
+        width: 100%;
+    }
+
+    .donut_wrap h3 {
+        font-size: 1.6rem;
+    }
+
+    .donut_wrap ul li,
+    .donut_wrap ol li {
+        font-size: 1.5rem;
+    }
+
+    .donut_hero img {
+        height: 40vh;
+    }
+
+    .donut_ingredients,
+    .recipe_preparation,
+    .donut_tips {
+        padding: 1.5rem;
+    }
 }
 
-@media (max-width: 600px) {
+/* Large Phones */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
 
     h2 {
-        font-size: 10vw;
+        font-size: 2.2rem;
+    }
+
+    .logo {
+        font-size: 5rem;
+    }
+
+    .logo span {
+        width: 4rem;
+        transform: translateY(6px);
+    }
+
+    header .comment {
+        font-size: 1.2rem;
+    }
+
+    .hero .btn {
+        width: 260px;
+        height: 40px;
+        font-size: 0.85rem;
+    }
+
+    .recipes_nav {
+        gap: 12px;
+    }
+
+    .recipes_nav > button {
+        font-size: 1.2rem;
+        padding: 0.4rem 1.2rem;
+    }
+
+    .recipe_item .btn {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    .review_card::before {
+        font-size: 6rem;
+    }
+
+    .review_header {
+        gap: 1rem;
+    }
+
+    .slider_dots {
+        gap: 10px;
+        margin-top: 1.5rem;
+    }
+
+    .dot {
+        width: 12px;
+        height: 12px;
+    }
+
+    .dot.active {
+        width: 32px;
+    }
+
+    .form_group input,
+    .form_group textarea {
+        padding: 0.8rem;
+        font-size: 0.95rem;
+    }
+
+    .submit_btn {
+        padding: 0.9rem 1.8rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 600px) {
+    h2 {
+        font-size: 8vw;
+        margin-bottom: 1rem;
     }
 
     .logo {
@@ -812,23 +1112,48 @@ header .comment {
     }
 
     header .comment {
-        font-size: 6vw;
+        font-size: 5vw;
+    }
+
+    .hero .btn {
+        width: 90%;
+        max-width: 280px;
+        height: 45px;
+        font-size: 0.9rem;
+    }
+
+    .recipes {
+        padding-top: 2rem;
     }
 
     .recipes_list {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .recipes_nav {
-        gap: 10px 0;
+        gap: 8px;
         flex-flow: wrap;
         justify-content: space-between;
     }
 
     .recipes_nav > button {
-        font-size: 14px;
-        padding: 10px 16px;
-        width: 49%;
+        font-size: 1rem;
+        padding: 0.4rem 1rem;
+        width: 48%;
+    }
+
+    .item_img {
+        height: 200px;
+    }
+
+    .item_name {
+        font-size: 1.2rem;
+    }
+
+    .item_description {
+        font-size: 0.9rem;
+        min-height: auto;
     }
 
     .reviews_section {
@@ -848,6 +1173,7 @@ header .comment {
     .review_header {
         flex-direction: column;
         align-items: flex-start;
+        gap: 0.8rem;
     }
 
     .review_avatar {
@@ -860,12 +1186,28 @@ header .comment {
         font-size: 1.2rem;
     }
 
+    .review_recipe {
+        font-size: 0.9rem;
+    }
+
     .review_text {
         font-size: 1rem;
+        padding: 0.8rem;
     }
 
     .star {
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+
+    .slider_arrow {
+        width: 45px;
+        height: 45px;
+        font-size: 1.8rem;
+    }
+
+    .slider_dots {
+        gap: 8px;
+        margin: 1.5rem 0;
     }
 
     .review_form_wrapper {
@@ -873,16 +1215,36 @@ header .comment {
     }
 
     .review_form_wrapper h3 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .form_group {
+        gap: 0.4rem;
     }
 
     .form_group label {
         font-size: 1rem;
     }
 
+    .form_group input,
+    .form_group textarea {
+        padding: 0.8rem;
+        font-size: 0.95rem;
+    }
+
+    .submit_btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .footer {
+        margin-top: 3rem;
+    }
+
     .footer .container {
         flex-direction: column;
-        gap: 10px 0;
+        gap: 15px 0;
     }
 
     .footer .logo {
@@ -895,6 +1257,161 @@ header .comment {
     }
 
     .footer_copy {
-        font-size: 4vw;
+        font-size: 3.5vw;
+    }
+
+    .donut_name {
+        margin-top: 1rem;
+    }
+
+    .donut_desc {
+        font-size: 1.5rem;
+    }
+
+    .donut_wrap {
+        margin-top: 2rem;
+        gap: 20px 0;
+    }
+
+    .donut_wrap h3 {
+        font-size: 1.4rem;
+    }
+
+    .donut_wrap ul,
+    .donut_wrap ol {
+        margin-left: 1rem;
+        margin-top: 1rem;
+        gap: 0.8rem;
+    }
+
+    .donut_wrap ul li,
+    .donut_wrap ol li {
+        font-size: 1.2rem;
+    }
+
+    .donut_hero img {
+        height: 35vh;
+    }
+
+    .donut_ingredients,
+    .recipe_preparation,
+    .donut_tips {
+        padding: 1.2rem;
+    }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 0.8rem;
+    }
+
+    h2 {
+        font-size: 9vw;
+    }
+
+    .hero .btn {
+        font-size: 0.85rem;
+        padding: 0 1rem;
+    }
+
+    .recipes_nav > button {
+        font-size: 0.9rem;
+        padding: 0.35rem 0.8rem;
+    }
+
+    .item_name {
+        font-size: 1.1rem;
+    }
+
+    .item_description {
+        font-size: 0.85rem;
+    }
+
+    .review_card {
+        padding: 1.2rem;
+    }
+
+    .review_card::before {
+        font-size: 4rem;
+    }
+
+    .review_name {
+        font-size: 1.1rem;
+    }
+
+    .review_recipe {
+        font-size: 0.85rem;
+    }
+
+    .review_text {
+        font-size: 0.95rem;
+        padding: 0.7rem;
+    }
+
+    .star {
+        font-size: 0.9rem;
+        gap: 0.2rem;
+    }
+
+    .review_form_wrapper {
+        padding: 1.2rem;
+    }
+
+    .review_form_wrapper h3 {
+        font-size: 1.5rem;
+    }
+
+    .form_group label {
+        font-size: 0.95rem;
+    }
+
+    .form_group input,
+    .form_group textarea {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    .submit_btn {
+        font-size: 0.95rem;
+    }
+
+    .slider_arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .dot.active {
+        width: 28px;
+    }
+
+    .donut_hero img {
+        height: 30vh;
+    }
+
+    .donut_wrap ul,
+    .donut_wrap ol {
+        margin-left: 0.8rem;
+    }
+
+    .donut_wrap ul li,
+    .donut_wrap ol li {
+        font-size: 1rem;
+    }
+
+    .donut_ingredients,
+    .recipe_preparation,
+    .donut_tips {
+        padding: 1rem;
+    }
+
+    .donut_desc {
+        font-size: 1.2rem;
     }
 }
